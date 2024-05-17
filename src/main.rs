@@ -100,11 +100,11 @@ impl Codec {
 
 fn main() {
     let mut codec = Codec::new();
-    let tiny_url = codec.encode("www.google.com".to_owned());
+    let tiny_url = codec.encode("https://www.google.com".to_owned());
 
-    println!("got {}", tiny_url);
+    println!("encoded: {}", tiny_url);
 
     let result = codec.decode(tiny_url);
 
-    println!("got {}", result);
+    println!("decoded {}", result);
 }
